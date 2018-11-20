@@ -7,11 +7,14 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 /**
  * Created by ly on 2018/11/7.
  */
-public class JdbcTemplateCondition implements Condition{
+public class JdbcTemplateCondition implements Condition {
+
     @Override
-    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
+    public boolean matches(ConditionContext conditionContext,
+            AnnotatedTypeMetadata annotatedTypeMetadata) {
         try {
-            conditionContext.getClassLoader().loadClass("org.springframework.jdbc.core.JdbcTemplate");
+            conditionContext.getClassLoader()
+                    .loadClass("org.springframework.jdbc.core.JdbcTemplate");
             return true;
         } catch (ClassNotFoundException e) {
             return false;
