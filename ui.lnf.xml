@@ -1,5 +1,6 @@
 <application>
   <component name="UISettings">
     <option name="FONT_FACE" value="Microsoft YaHei" />
+    <option name="MAX_LOOKUP_WIDTH2" value="846" />
   </component>
 </application>
